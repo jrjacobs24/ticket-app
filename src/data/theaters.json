@@ -1,0 +1,36 @@
+{
+  "location": {
+    "formattedname": "29414",
+    "searchtz": "EST",
+    "searchdst": true,
+    "theaters": {
+      "theater1":{
+        "id": "AAINZ",
+        "name": "Cinemark Movies 8",
+        "address1": "4488 Ladson Road",
+        "address2": "",
+        "city": "Summerville",
+        "state": "SC",
+        "postalcode": "29485"
+      },
+      "theater2":{
+        "id": "AAWFF",
+        "name": "Northwoods Stadium Cinemas",
+        "address1": "2181 Northwoods Blvd.",
+        "address2": "",
+        "city": "North Charleston",
+        "state": "SC",
+        "postalcode": "29406"
+      },
+      "theater3":{
+        "id": "AAVQS",
+        "name": "Citadel Mall Stadium 16",
+        "address1": "2072 Sam Rittenberg BL",
+        "address2": "",
+        "city": "Charleston",
+        "state": "SC",
+        "postalcode": "29407"
+      }
+    }
+  }
+}

@@ -1,0 +1,2 @@
+// Movies
+export const GET_MOVIES_SUCCESS = 'GET-MOVIES-SUCCESS';

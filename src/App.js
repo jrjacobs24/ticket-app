@@ -7,7 +7,7 @@ import {
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import Header from './components/common/Header';
 import HomePage from './components/home/HomePage';
-import Theaters from './components/theaters/Theaters';
+import MoviesView from './components/movies/Movies';
 
 class App extends Component {
   render() {
@@ -19,7 +19,7 @@ class App extends Component {
               <Header />
             </div>
             <Route exact path="/" component={HomePage} />
-            <Route path="/theaters" component={Theaters} />
+            <Route path="/movies" component={MoviesView} />
           </div>
         </Router>
       </MuiThemeProvider>
