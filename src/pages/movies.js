@@ -7,7 +7,7 @@ import MoviesView from '../components/movies';
 const mapStateToProps = state => state;
 
 const mapDispatchToProps = {
-  searchMovies
+  searchMovies: searchMovies,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(MoviesView);

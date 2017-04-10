@@ -2,25 +2,28 @@ import { handleActions } from 'redux-actions';
 import { searchRequest, searchResponse, searchError } from '../actions/movies';
 
 export default handleActions({
-  searchRequest: (state, { payload }) => ({
+  [searchRequest]: (state, { payload }) => ({
     ...state,
     isSearching: true,
     searchUrl: payload,
   }),
 
-  searchResponse: (state, { payload }) => ({
+  [searchResponse]: (state, { payload }) => ({
     ...state,
     isSearching: false,
-    results: payload.movies,
+    ...payload,
   }),
 
-  searchError: (state, { payload }) => ({
+  [searchError]: (state, { payload }) => ({
     ...state,
     isSearching: false,
     results: [],
     error: payload,
   })
 }, {
+  page: 1,
+  total_results: 0,
+  total_pages: 0,
   isSearching: false,
   searchUrl: '',
   error: {},

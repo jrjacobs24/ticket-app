@@ -17,6 +17,9 @@ export const searchMovies = () => (dispatch, getState) => {
     include_adult: false,
   };
   const url = `https://api.themoviedb.org/3/search/movie?${querystring.stringify(pars)}`;
-  searchRequest(url);
-  return axios.get(url).then(searchResponse, searchError);
+  dispatch(searchRequest(url));
+  return axios.get(url).then(
+    results => dispatch(searchResponse(results)),
+    err => dispatch(searchError(err))
+  );
 };
