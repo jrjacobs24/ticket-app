@@ -10,7 +10,7 @@ export const searchMovies = () => (dispatch, getState) => {
   // This is how you would pull the search from state
   // const { search } = getState();
   const pars = {
-    api_key: '244f0e42b58da27a1a252ded03c528f',
+    api_key: '244f0e42b58da27a1a252ded03c528f7',
     language: 'en-US',
     query: 'Star%20Wars',
     page: 1,
