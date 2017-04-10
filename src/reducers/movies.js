@@ -11,22 +11,18 @@ export default handleActions({
   searchResponse: (state, { payload }) => ({
     ...state,
     isSearching: false,
-    movies: payload.movies,
+    results: payload.movies,
   }),
 
   searchError: (state, { payload }) => ({
     ...state,
     isSearching: false,
-    movies: {
-      results: [],
-    },
+    results: [],
     error: payload,
   })
 }, {
   isSearching: false,
   searchUrl: '',
   error: {},
-  movies: {
-    results: []
-  }
+  results: [],
 });
