@@ -2,11 +2,13 @@ import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import axios from 'axios';
 import createStore from './store'; 
+import { getConfig } from './services/config';
 import App from './App';
 import './index.css';
 
-const store = createStore({
+/*const store = createStore({
   movies: {
     results: []
   }
@@ -17,13 +19,10 @@ ReactDOM.render(
     <App />
   </Provider>,
   document.getElementById('root')
-);
+);*/
 
 
-/*
-import { getSomeData } = './services/myData';
-
-getSomeData(blah).then(results => {
+axios.get(getConfig()).then(results => {
   const store = createStore({
     settings: results
   });
@@ -34,4 +33,3 @@ getSomeData(blah).then(results => {
     document.getElementById('root')
   );
 });
-*/

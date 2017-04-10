@@ -5,7 +5,7 @@ import {
   Route
 } from 'react-router-dom';
 import { Header, Container } from './components/common';
-import HomePage from './components/home/HomePage';
+import HomePage from './pages/home';
 import MoviesPage from './pages/movies';
 
 class App extends Component {
@@ -14,10 +14,8 @@ class App extends Component {
       <Router>
         <div>
           <Header />
-          <Container>
-            <Route exact path="/" component={HomePage} />
-            <Route path="/movies" component={MoviesPage} />
-          </Container>
+          <Route exact path="/" component={HomePage} />
+          <Route path="/movies" component={MoviesPage} />
         </div>
       </Router>
     );

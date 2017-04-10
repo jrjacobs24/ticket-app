@@ -11,7 +11,7 @@ const MoviesListItem = ({ movie }) => {
     <Card>
       <CardBlock>
         <CardTitle>{movie.original_title}</CardTitle>
-        <div>{movie.overview}</div>
+        <p>{movie.overview}</p>
         <CardLink href="#">More Info</CardLink>
         <CardLink href="#">View Related</CardLink>
       </CardBlock>
