@@ -4,7 +4,7 @@ import store from '../../../store';
 import axios from 'axios';
 import { getMoviesSuccess } from '../../../actions/actionCreators';
 import VisibleMoviesList from '../MoviesList/VisibleMovieList';
-import RaisedButton from 'material-ui/RaisedButton';
+import Button from 'react-bootstrap/lib/Button';
 
 const MoviesView = (props) => {
 
@@ -20,12 +20,10 @@ const MoviesView = (props) => {
   return(
       <div>
         <h1>This is the Movies Page</h1>
-        <RaisedButton label="Get Movies" onClick={() => getMovies()} />
+        <Button btStyle="primary" onClick={() => getMovies()}>Get Movies</Button>
         <VisibleMoviesList />
       </div>
   );
 };
-
-
 
 export default MoviesView;

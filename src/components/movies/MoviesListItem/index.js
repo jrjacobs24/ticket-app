@@ -1,15 +1,20 @@
 import React, { PropTypes } from 'react';
-import RaisedButton from 'material-ui/RaisedButton';
-import { Card, CardTitle, CardText } from 'material-ui/Card';
+import {
+  Card,
+  CardTitle,
+  CardBlock,
+  CardLink
+} from './../../common/Card';
 
 const MoviesListItem = ({ movie }) => {
   return(
     <Card>
-      <CardTitle title={movie.original_title} />
-      <CardText>
+      <CardBlock>
+        <CardTitle>{movie.original_title}</CardTitle>
         <div>{movie.overview}</div>
-        <RaisedButton label="Default" />
-      </CardText>
+        <CardLink href="#">More Info</CardLink>
+        <CardLink href="#">View Related</CardLink>
+      </CardBlock>
     </Card>
   );
 };
