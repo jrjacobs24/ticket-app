@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 import { Header, Container } from './components/common';
 import HomePage from './components/home/HomePage';
-import MoviesView from './components/movies/Movies';
+import MoviesPage from './pages/movies';
 
 class App extends Component {
   render() {
@@ -16,7 +16,7 @@ class App extends Component {
           <Header />
           <Container>
             <Route exact path="/" component={HomePage} />
-            <Route path="/movies" component={MoviesView} />
+            <Route path="/movies" component={MoviesPage} />
           </Container>
         </div>
       </Router>

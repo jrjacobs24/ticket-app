@@ -1,10 +1,12 @@
-import { createStore } from 'redux';
-import movieReducer from '../reducers/movie-reducers';
+import { createStore, applyMiddleware, compose } from 'redux';
+import thunk from 'redux-thunk';
+import reducers from '../reducers';
 
-// Create a store by passing in the reducer
-const store = createStore(
-  movieReducer, /* preloadedState, */
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
+const finalCreateStore = compose(
+  applyMiddleware(thunk),
+  window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__() : f => f
+)(createStore);
+
+const store = finalCreateStore(reducers, {});
 
 export default store;

@@ -3,7 +3,7 @@ import MoviesListItem from './../MoviesListItem';
 
 const MoviesList = (props) => {
   let movies = []
-  if(props.movies.results) {
+  if(props.movies) {
     movies = props.movies.results.map(movie => (
       <MoviesListItem key={movie.id} movie={movie} />
     ));
